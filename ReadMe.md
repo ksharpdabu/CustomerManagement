@@ -17,7 +17,7 @@
 
 #关键点
 
-1.
+1. 
 <a>标签的href属性可以直接设置javascrpit函数，JSP中如下：
  ```
 	<a href="javascript:delOne('${c.id}')">删除</a>
@@ -27,13 +27,13 @@
 这样方便直接通过java代码来设置js函数的参数值，这样就避免了从html中获取删除条目的id值，也省去了写onClick属性的麻烦。
 
 
-2.
+2. 
 对于批量删除的时候，如何批量获取和上传id的问题，见listCustomer.jsp页面
 
 这里采用了form表单的形式来上传 所选的多个id值。这样就不需要用js代码手动获取所有的id值了，省时省力，指的借鉴。
 
 
-3.
+3. 
 表单提交的问题引出的问题！！
 何时使用重定向（redirect），何时使用请求转发（forward）
 
@@ -47,7 +47,7 @@
 之所以只在查询操作的时候使用forward，是因为查询操作不会修改数据库，即使是重复查询也没任何影响。而增删改三个操作都会修改数据库，所以出现重复提交就会修改数据库数据，不安全。
 
 
-4.getContextPath()导致的问题
+4. getContextPath()导致的问题
 见 [《jsp中相对路径${pageContext.request.contextPath} 与绝对路径（RealPath）的区别及bug》](http://www.dabu.info/jsp-servlet-contextpath-realpath-different-bug.html)
 
 
