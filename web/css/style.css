@@ -1,0 +1,25 @@
+body {
+
+
+    font-size: 12px;
+    /*文本居中*/
+    text-align: center;
+}
+
+
+table{
+
+    font-size: 12px;
+    /*文本居中*/
+    text-align: center;
+}
+
+
+.odd {
+    background-color: #c3f3c3;
+}
+
+
+.even {
+    background-color: #f3c3f3;
+}
