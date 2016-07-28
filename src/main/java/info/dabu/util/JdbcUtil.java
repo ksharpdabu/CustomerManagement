@@ -1,6 +1,5 @@
 package info.dabu.util;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
@@ -41,10 +40,8 @@ public class JdbcUtil {
 
 
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            throw  new RuntimeException("连接数据库出错，请修复！",e);
         }
 
 
