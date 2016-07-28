@@ -31,32 +31,26 @@ public class JdbcUtil {
             user = props.getProperty("user");
             password = props.getProperty("password");
 
-            System.out.println("driverClass="+ driverClass);
-
+            System.out.println("driverClass=" + driverClass);
 
 
             JdbcUtil.class.getClass().forName(driverClass);
 
 
-
-
         } catch (Exception e) {
-            throw  new RuntimeException("连接数据库出错，请修复！",e);
+            throw new RuntimeException("连接数据库出错，请修复！", e);
         }
-
 
     }
 
 
-    public static Connection getConnection(){
+    public static Connection getConnection() {
         Connection conn = null;
 
         try {
 
 
-           conn =  DriverManager.getConnection(url,user,password);
-
-
+            conn = DriverManager.getConnection(url, user, password);
 
 
         } catch (SQLException e) {
@@ -69,9 +63,9 @@ public class JdbcUtil {
     }
 
 
-    public static void  release(ResultSet rs , Statement stmt,Connection conn){
+    public static void release(ResultSet rs, Statement stmt, Connection conn) {
 
-        if ( null != rs){
+        if (null != rs) {
 
             try {
                 rs.close();
@@ -83,7 +77,7 @@ public class JdbcUtil {
         }
 
 
-        if ( null != stmt){
+        if (null != stmt) {
 
             try {
                 stmt.close();
@@ -96,7 +90,7 @@ public class JdbcUtil {
         }
 
 
-        if ( null != conn){
+        if (null != conn) {
 
             try {
                 conn.close();
@@ -109,9 +103,7 @@ public class JdbcUtil {
         }
 
 
-
     }
-
 
 
 }
